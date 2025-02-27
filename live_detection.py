@@ -15,14 +15,14 @@ GESTURE_CLASSES = sorted([f for f in os.listdir("medical_signs_dataset/")
 # Initialize MediaPipe Hands
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
-hands = mp_hands.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.7)
+hands = mp_hands.Hands(min_detection_confidence=0.6, min_tracking_confidence=0.6)
 
 # Open webcam
 cap = cv2.VideoCapture(2)
 
 # Define display settings
 FONT = cv2.FONT_HERSHEY_SIMPLEX
-THRESHOLD = 0.85  # Confidence threshold
+THRESHOLD = 0.6  # Confidence threshold
 IMG_SIZE = 64  # Must match training size
 WINDOW_NAME = "Hand Gesture Recognition"
 
